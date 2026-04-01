@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Beach Volley Emilia-Romagna - Allenamenti a 20€ e Tornei dal venerdì alla domenica con Mirko Cavecchi">
+    <title>Beach Volley ER | Allenamenti &amp; Tornei con Mirko Cavecchi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&display=swap');
+        
+        :root {
+            --tw-color-primary: #f59e0b;
+        }
+        
+        * {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
+        }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+        }
+        
+        .form-input {
+            transition: all 0.2s ease;
+        }
+        
+        .form-input:focus {
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.3);
+            border-color: #f59e0b;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #f59e0b;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- NAVBAR -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-orange-500 rounded-2xl flex items-center justify-center text-white text-3xl">
+                        🏐
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold tracking-tight text-gray-900">Beach Volley <span class="text-orange-500">ER</span></h1>
+                        <p class="text-xs text-orange-600 -mt-1 font-medium">con Mirko Cavecchi</p>
+                    </div>
+                </div>
+                
+                <!-- Menu Desktop -->
+                <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a href="#allenamenti" class="nav-link text-gray-700 hover:text-orange-500">Allenamenti</a>
+                    <a href="#tornei" class="nav-link text-gray-700 hover:text-orange-500">Tornei</a>
+                    <a href="#iscrizioni" class="nav-link text-gray-700 hover:text-orange-500">Iscriviti</a>
+                    <a href="#allenatore" class="nav-link text-gray-700 hover:text-orange-500">Allenatore</a>
+                    <a href="#contatti" class="nav-link text-gray-700 hover:text-orange-500">Contatti</a>
+                </div>
+                
+                <!-- CTA -->
+                <a href="#iscrizioni" 
+                   class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-2xl font-semibold flex items-center gap-2 shadow-md">
+                    <i class="fas fa-paper-plane"></i>
+                    ISCRIVITI ORA
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-3xl text-gray-700">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 bg-white border-t py-4">
+                <div class="flex flex-col gap-4 text-center font-medium">
+                    <a href="#allenamenti" class="py-2 hover:text-orange-500">Allenamenti</a>
+                    <a href="#tornei" class="py-2 hover:text-orange-500">Tornei</a>
+                    <a href="#iscrizioni" class="py-2 hover:text-orange-500">Iscriviti</a>
+                    <a href="#allenatore" class="py-2 hover:text-orange-500">Allenatore</a>
+                    <a href="#contatti" class="py-2 hover:text-orange-500">Contatti</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero-bg h-screen flex items-center text-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="max-w-2xl mx-auto">
+                <span class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md text-white text-sm font-medium px-5 py-2 rounded-3xl mb-6">
+                    <i class="fas fa-sun"></i>
+                    EMILIA-ROMAGNA BEACH VOLLEY
+                </span>
+                <h1 class="text-6xl md:text-7xl font-bold leading-none tracking-tighter mb-6">
+                    ALLENATI.<br>COMPETI.<br>VINCI.
+                </h1>
+                <p class="text-2xl md:text-3xl mb-8 text-orange-200">
+                    Allenamenti a <strong class="text-white">20€</strong> per 1 ora e mezza<br>
+                    Tornei dal venerdì alla domenica in tutta l'Emilia-Romagna
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#iscrizioni" 
+                       class="bg-orange-500 hover:bg-orange-600 text-white text-xl font-semibold px-10 py-5 rounded-3xl flex items-center justify-center gap-3 text-center">
+                        <i class="fas fa-ticket"></i>
+                        ISCRIVITI AI TORNEI
+                    </a>
+                    <a href="#allenamenti" 
+                       class="border-2 border-white hover:bg-white hover:text-gray-900 text-white text-xl font-semibold px-10 py-5 rounded-3xl flex items-center justify-center gap-3">
+                        <i class="fas fa-dumbbell"></i>
+                        PRENOTA ALLENAMENTO
+                    </a>
+                </div>
+                <div class="mt-12 text-sm flex justify-center items-center gap-8">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-map-marker-alt text-orange-400"></i>
+                        <span>Emilia-Romagna</span>
+                    </div>
+                    <div class="h-3 w-px bg-white/50"></div>
+                    <div>Prezzi tornei da 100€ a 300€ a squadra</div>
+                    <div class="h-3 w-px bg-white/50"></div>
+                    <div>Allenatore: Mirko Cavecchi</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 flex flex-col items-center text-white/70 text-sm">
+            <span>Scorri per scoprire</span>
+            <i class="fas fa-chevron-down animate-bounce mt-2 text-2xl"></i>
+        </div>
+    </header>
+
+    <!-- ALLENATORE -->
+    <section id="allenatore" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <!-- Foto -->
+                <div class="md:col-span-5">
+                    <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+                        <div class="aspect-square bg-gradient-to-br from-orange-400 to-amber-600 flex items-center justify-center text-9xl text-white">
+                            👨‍🏫
+                            <div class="absolute text-center text-2xl font-bold text-white drop-shadow-lg">
+                                MIRKO CAVECCHI
+                            </div>
+                        </div>
+                        <div class="p-8 text-center">
+                            <p class="text-orange-600 font-semibold text-sm tracking-widest">ALLENATORE CERTIFICATO FIPAV</p>
+                            <h2 class="text-4xl font-bold mt-2">Mirko Cavecchi</h2>
+                            <div class="flex justify-center gap-6 mt-6 text-orange-500">
+                                <div><i class="fas fa-trophy"></i> 12 titoli regionali</div>
+                                <div><i class="fas fa-medal"></i> 8 anni esperienza</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testo -->
+                <div class="md:col-span-7">
+                    <h2 class="text-5xl font-bold tracking-tight mb-8">Il tuo allenatore:<br>Mirko Cavecchi</h2>
+                    <div class="prose text-lg text-gray-700 max-w-none">
+                        <p>Mirko Cavecchi è uno dei più apprezzati allenatori di beach volley dell'Emilia-Romagna. Con oltre 10 anni di esperienza sul campo, ha formato centinaia di atleti che oggi competono a livello regionale e nazionale.</p>
+                        <p>La sua filosofia è semplice ma efficace: <strong>tecnica, divertimento e spirito di squadra</strong>. Ex giocatore professionista, Mirko ha partecipato a numerosi tornei internazionali e oggi trasmette la sua passione a tutti i suoi allievi, dai principianti ai giocatori agonisti.</p>
+                        <p>Specializzato in preparazione atletica specifica per beach volley, tattica di coppia e gestione mentale durante i match. Ogni allenamento con Mirko è un'esperienza unica: attenzione personalizzata, esercizi divertenti e consigli pratici per migliorare subito.</p>
+                    </div>
+                    
+                    <div class="mt-12 grid grid-cols-3 gap-6">
+                        <div class="bg-white p-6 rounded-3xl shadow-sm text-center">
+                            <i class="fas fa-users text-4xl text-orange-500 mb-4"></i>
+                            <p class="font-semibold">+450 atleti formati</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-3xl shadow-sm text-center">
+                            <i class="fas fa-globe text-4xl text-orange-500 mb-4"></i>
+                            <p class="font-semibold">Esperienze internazionali</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-3xl shadow-sm text-center">
+                            <i class="fas fa-heart text-4xl text-orange-500 mb-4"></i>
+                            <p class="font-semibold">Passione pura per il beach</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ALLENAMENTI -->
+    <section id="allenamenti" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="px-5 py-2 bg-orange-100 text-orange-600 rounded-3xl text-sm font-semibold">PREZZO FISSO</span>
+                <h2 class="text-5xl font-bold mt-4">Allenamenti di Beach Volley</h2>
+                <p class="text-2xl text-gray-600 mt-3 max-w-xl mx-auto">
+                    Solo <span class="font-bold text-orange-500">20€</span> per 1 ora e mezza di allenamento intenso con Mirko Cavecchi
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-gradient-to-br from-orange-50 to-amber-50 border border-orange-200 rounded-3xl p-8 card-hover">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-3xl font-semibold">Sessioni Individuali / Coppia</h3>
+                            <p class="text-orange-600 mt-2 font-medium">1 ora e mezza • 20€</p>
+                        </div>
+                        <div class="text-7xl">🏖️</div>
+                    </div>
+                    <ul class="mt-8 space-y-4 text-gray-700">
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Tecnica di palleggio e attacco</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Difesa e ricezione</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Esercizi specifici in sabbia</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-check text-green-500"></i> Max 6 atleti per gruppo</li>
+                    </ul>
+                    <button onclick="mostraFormAllenamento()" 
+                            class="mt-10 w-full bg-orange-500 hover:bg-orange-600 text-white py-4 rounded-2xl font-semibold flex items-center justify-center gap-2">
+                        PRENOTA ORA A 20€
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <p class="text-xs text-center mt-4 text-gray-500">Orari flessibili • Tutti i livelli</p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-white border-2 border-orange-500 rounded-3xl p-8 relative card-hover">
+                    <div class="absolute -top-3 right-6 bg-orange-500 text-white text-xs font-bold px-4 py-1 rounded-b-3xl">PIÙ RICHIESTO</div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-3xl font-semibold">Allenamento di Coppia</h3>
+                            <p class="text-orange-600 mt-2 font-medium">1 ora e mezza • 20€ a persona</p>
+                        </div>
+                        <div class="text-7xl">👥</div>
+                    </div>
+                    <p class="mt-6 text-gray-600">Perfetto per chi gioca già in coppia e vuole migliorare sincronia, tattica e comunicazione.</p>
+                    <div class="mt-8 flex gap-4 text-sm">
+                        <div class="flex-1 bg-white border rounded-2xl p-4 text-center">
+                            Venerdì 18:00<br><span class="font-bold">Rimini</span>
+                        </div>
+                        <div class="flex-1 bg-white border rounded-2xl p-4 text-center">
+                            Sabato 09:30<br><span class="font-bold">Ravenna</span>
+                        </div>
+                    </div>
+                    <button onclick="mostraFormAllenamento()" 
+                            class="mt-10 w-full bg-orange-500 hover:bg-orange-600 text-white py-4 rounded-2xl font-semibold">
+                        PRENOTA IL TUO SLOT
+                    </button>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="bg-white rounded-3xl p-8 card-hover">
+                    <h3 class="text-3xl font-semibold mb-6">Perché scegliere i nostri allenamenti?</h3>
+                    <div class="space-y-8">
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 bg-orange-100 text-orange-500 rounded-2xl flex items-center justify-center flex-shrink-0">1</div>
+                            <div>Allenatore professionista sempre presente</div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 bg-orange-100 text-orange-500 rounded-2xl flex items-center justify-center flex-shrink-0">2</div>
+                            <div>Campo in sabbia omologato FIPAV</div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 bg-orange-100 text-orange-500 rounded-2xl flex items-center justify-center flex-shrink-0">3</div>
+                            <div>Video-analisi gratuita delle tue azioni</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TORNEI -->
+    <section id="tornei" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-orange-400 font-semibold">EMILIA-ROMAGNA</span>
+                <h2 class="text-5xl font-bold mt-3">I Tornei del Weekend</h2>
+                <p class="mt-4 text-xl text-gray-400">Dal venerdì alla domenica • Iscrizione a squadra da 100€ a 300€</p>
+            </div>
+            
+            <div id="tornei-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- I tornei vengono generati via JavaScript -->
+            </div>
+            
+            <p class="text-center text-gray-400 mt-12 text-sm">
+                Tutti i tornei si svolgono su campi ufficiali in sabbia con arbitri FIPAV.<br>
+                Inclusi premi, gadget e festa finale la domenica sera.
+            </p>
+        </div>
+    </section>
+
+    <!-- ISCRIZIONI -->
+    <section id="iscrizioni" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-bold">Iscriviti ora</h2>
+                <p class="mt-3 text-xl text-gray-600">Dati personali di ogni giocatore + nome squadra + importo quota</p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-3xl p-10 shadow-inner">
+                <form id="form-iscrizione" onsubmit="gestisciIscrizione(event)">
+                    <!-- Scelta Torneo / Allenamento -->
+                    <div class="mb-8">
+                        <label class="block text-sm font-semibold mb-3 text-gray-700">Cosa vuoi iscrivere?</label>
+                        <div class="flex gap-4">
+                            <button type="button" onclick="selezionaTipo(0)" 
+                                    id="btn-torneo"
+                                    class="flex-1 py-4 rounded-2xl border-2 border-orange-500 font-semibold text-orange-500 hover:bg-orange-50 active">
+                                TORNEI (squadra)
+                            </button>
+                            <button type="button" onclick="selezionaTipo(1)" 
+                                    id="btn-allenamento"
+                                    class="flex-1 py-4 rounded-2xl border-2 border-gray-300 font-semibold hover:border-orange-400">
+                                ALLENAMENTO (20€)
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Selezione Torneo -->
+                    <div id="torneo-fields">
+                        <label class="block text-sm font-semibold mb-3">Seleziona il Torneo</label>
+                        <select id="select-torneo" onchange="aggiornaPrezzo()" 
+                                class="form-input w-full px-6 py-4 rounded-2xl border border-gray-300 text-lg">
+                            <!-- Popolato via JS -->
+                        </select>
+                        
+                        <div class="mt-6 flex justify-between items-center bg-white rounded-2xl px-6 py-4">
+                            <span class="font-medium">Importo della quota (a squadra)</span>
+                            <span id="importo-visual" class="text-4xl font-bold text-orange-500">150€</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Campi Comuni -->
+                    <div class="mt-10">
+                        <label class="block text-sm font-semibold mb-3">Nome della Squadra</label>
+                        <input type="text" id="nome-squadra" required
+                               class="form-input w-full px-6 py-4 rounded-2xl border border-gray-300 text-lg" 
+                               placeholder="Es. Beach Warriors ER">
+                    </div>
+                    
+                    <!-- Giocatore 1 -->
+                    <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-semibold text-lg mb-4 flex items-center gap-2">
+                                <span class="bg-orange-500 text-white w-6 h-6 rounded-xl flex items-center justify-center text-sm">1</span>
+                                Giocatore 1
+                            </h4>
+                            <div class="space-y-4">
+                                <input type="text" id="g1-nome" required placeholder="Nome" class="form-input w-full px-6 py-4 rounded-2xl border border-gray-300">
+                                <input type="text" id="g1-cognome" required placeholder="Cognome" class="form-input w-full px-6 py-4 rounded-2xl border border-gray-300">
+                                <input type="email" id="g1-email" required placeholder="Email" class="form-input w-full px-6 py-4 rounded-2xl border border-gray-300">
+                                <input type="tel" id="g1-telefono" required placeholder="Telefono" class="form-input w-full px-6 py-4 rounded-2xl border border-gray-300">
+                            </div>
+                        </div>
+                        
+                        <!-- Giocatore 2 -->
+                        <div>
+                            <h4 class="font-semibold text-lg mb-4 flex items-center gap-2">
+                                <span class="bg-orange-500 text-white w-6 h-6 rounded-xl flex items-center justify-center text-sm">2</span>
+                                Giocatore 2
+                            </h4>
+                            <div class="space-y-4">
+                                <input type="text" id="g2-nome" required placeholder="Nome" class="form-input w-full px-6 py-4 rounded-2xl border border-gray-300">
+                                <input type="text" id="g2-cognome" required placeholder="Cognome" class="form-input w-full px-6 py-4 rounded-2xl border border-gray-300">
+                                <input type="email" id="g2-email" required placeholder="Email" class="form-input w-full px-6 py-4 rounded-2xl border border-gray-300">
+                                <input type="tel" id="g2-telefono" required placeholder="Telefono" class="form-input w-full px-6 py-4 rounded-2xl border border-gray-300">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Importo finale + Note -->
+                    <div class="mt-12 bg-orange-50 border border-orange-200 rounded-3xl p-6 flex flex-col md:flex-row justify-between items-center">
+                        <div>
+                            <p class="font-semibold">Quota totale da pagare</p>
+                            <p id="quota-totale" class="text-5xl font-bold text-orange-600">150 €</p>
+                        </div>
+                        <div class="text-right mt-4 md:mt-0">
+                            <p class="text-sm text-gray-600">Pagamento sicuro via bonifico o carta</p>
+                            <button type="submit" 
+                                    class="mt-4 bg-orange-500 hover:bg-orange-600 text-white px-12 py-6 rounded-3xl text-2xl font-bold shadow-lg flex items-center gap-3">
+                                INVIA ISCRIZIONE
+                                <i class="fas fa-check-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <p class="text-xs text-gray-500 mt-6 text-center">I dati saranno trattati secondo GDPR. Riceverai conferma via email entro 24 ore.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATTI & FOOTER -->
+    <footer id="contatti" class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12">
+            <div class="md:col-span-4">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-12 h-12 bg-orange-500 rounded-2xl flex items-center justify-center text-white text-3xl">🏐</div>
+                    <h2 class="text-3xl font-bold">Beach Volley ER</h2>
+                </div>
+                <p class="text-gray-400">Allenamenti e tornei di beach volley in tutta l'Emilia-Romagna con l'allenatore Mirko Cavecchi.</p>
+                <div class="flex gap-6 mt-10">
+                    <a href="#" class="text-3xl hover:text-orange-400"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-3xl hover:text-orange-400"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-3xl hover:text-orange-400"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="md:col-span-2">
+                <h4 class="font-semibold mb-6">Link rapidi</h4>
+                <ul class="space-y-3 text-gray-400">
+                    <li><a href="#allenamenti" class="hover:text-white">Allenamenti 20€</a></li>
+                    <li><a href="#tornei" class="hover:text-white">Tornei Emilia-Romagna</a></li>
+                    <li><a href="#iscrizioni" class="hover:text-white">Iscrizione squadra</a></li>
+                    <li><a href="#allenatore" class="hover:text-white">Mirko Cavecchi</a></li>
+                </ul>
+            </div>
+            
+            <div class="md:col-span-3">
+                <h4 class="font-semibold mb-6">Contattaci</h4>
+                <p class="flex items-center gap-3 mb-3"><i class="fas fa-phone"></i> +39 335 123 4567</p>
+                <p class="flex items-center gap-3 mb-3"><i class="fas fa-envelope"></i> mirko.cavecchi@beachvolleyer.it</p>
+                <p class="flex items-center gap-3"><i class="fas fa-map-marker-alt"></i> Rimini • Ravenna • Cesenatico</p>
+            </div>
+            
+            <div class="md:col-span-3 text-sm text-gray-400">
+                © 2026 Beach Volley ER - Tutti i diritti riservati.<br>
+                Creato per te con passione per il beach volley.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script init
+        function initializeTailwind() {
+            tailwind.config = {
+                content: [],
+                theme: {
+                    extend: {}
+                }
+            }
+        }
+        
+        // Dati tornei (tutti dal venerdì alla domenica)
+        const tornei = [
+            {
+                id: 1,
+                citta: "Rimini",
+                nome: "Rimini Beach Open",
+                date: "Venerdì 9 - Domenica 11 Maggio 2026",
+                prezzo: 150,
+                descrizione: "Torneo livello intermedio - 16 squadre"
+            },
+            {
+                id: 2,
+                citta: "Cesenatico",
+                nome: "Cesenatico Summer Cup",
+                date: "Venerdì 16 - Domenica 18 Maggio 2026",
+                prezzo: 100,
+                descrizione: "Torneo principianti e amatori"
+            },
+            {
+                id: 3,
+                citta: "Ravenna",
+                nome: "Ravenna Sand Masters",
+                date: "Venerdì 23 - Domenica 25 Maggio 2026",
+                prezzo: 220,
+                descrizione: "Torneo agonistico - premi in denaro"
+            },
+            {
+                id: 4,
+                citta: "Riccione",
+                nome: "Riccione Grand Slam",
+                date: "Venerdì 30 Maggio - Domenica 1 Giugno 2026",
+                prezzo: 280,
+                descrizione: "Torneo top level - 24 squadre"
+            },
+            {
+                id: 5,
+                citta: "Cervia",
+                nome: "Cervia Beach Festival",
+                date: "Venerdì 6 - Domenica 8 Giugno 2026",
+                prezzo: 300,
+                descrizione: "Torneo internazionale con live music"
+            }
+        ]
+        
+        // Popola la griglia dei tornei
+        function popolaTornei() {
+            const grid = document.getElementById('tornei-grid')
+            grid.innerHTML = ''
+            
+            tornei.forEach(t => {
+                const card = document.createElement('div')
+                card.className = `bg-white text-gray-900 rounded-3xl overflow-hidden card-hover p-6`
+                card.innerHTML = `
+                    <div class="flex justify-between">
+                        <div class="text-4xl">🏖️</div>
+                        <div class="text-right">
+                            <span class="px-4 py-1 bg-orange-100 text-orange-600 text-xs font-bold rounded-3xl">${t.citta}</span>
+                        </div>
+                    </div>
+                    <h3 class="font-bold text-2xl mt-6">${t.nome}</h3>
+                    <p class="text-orange-600 font-medium">${t.date}</p>
+                    <p class="mt-2 text-gray-600 text-sm">${t.descrizione}</p>
+                    
+                    <div class="mt-8 flex items-end justify-between">
+                        <div>
+                            <span class="text-xs uppercase tracking-widest">Iscrizione squadra</span>
+                            <p class="text-5xl font-bold">${t.prezzo}€</p>
+                        </div>
+                        <button onclick="selezionaTorneoDaCard(${t.id})" 
+                                class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-2xl text-sm font-semibold flex items-center gap-2">
+                            ISCRIVITI
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                `
+                grid.appendChild(card)
+            })
+        }
+        
+        // Popola select tornei
+        function popolaSelectTornei() {
+            const select = document.getElementById('select-torneo')
+            select.innerHTML = ''
+            
+            tornei.forEach(t => {
+                const option = document.createElement('option')
+                option.value = t.id
+                option.textContent = `${t.nome} - ${t.date} (${t.prezzo}€)`
+                select.appendChild(option)
+            })
+            
+            // Pre-seleziona il primo
+            aggiornaPrezzo()
+        }
+        
+        // Aggiorna prezzo visualizzato
+        function aggiornaPrezzo() {
+            const select = document.getElementById('select-torneo')
+            const idSelezionato = parseInt(select.value)
+            const torneo = tornei.find(t => t.id === idSelezionato)
+            
+            if (torneo) {
+                document.getElementById('importo-visual').textContent = torneo.prezzo + '€'
+                document.getElementById('quota-totale').textContent = torneo.prezzo + ' €'
+            }
+        }
+        
+        // Selezione tipo iscrizione (torneo vs allenamento)
+        let tipoAttuale = 0 // 0 = torneo, 1 = allenamento
+        
+        function selezionaTipo(tipo) {
+            tipoAttuale = tipo
+            
+            const btnTorneo = document.getElementById('btn-torneo')
+            const btnAllenamento = document.getElementById('btn-allenamento')
+            const torneoFields = document.getElementById('torneo-fields')
+            
+            if (tipo === 0) {
+                btnTorneo.classList.add('border-orange-500', 'text-orange-500', 'bg-orange-50')
+                btnTorneo.classList.remove('border-gray-300')
+                btnAllenamento.classList.remove('border-orange-500', 'text-orange-500', 'bg-orange-50')
+                btnAllenamento.classList.add('border-gray-300')
+                torneoFields.style.display = 'block'
+            } else {
+                btnAllenamento.classList.add('border-orange-500', 'text-orange-500', 'bg-orange-50')
+                btnAllenamento.classList.remove('border-gray-300')
+                btnTorneo.classList.remove('border-orange-500', 'text-orange-500', 'bg-orange-50')
+                btnTorneo.classList.add('border-gray-300')
+                torneoFields.style.display = 'none'
+                // Per allenamento mostriamo quota fissa
+                document.getElementById('quota-totale').innerHTML = `20 € <span class="text-sm font-normal ml-2">(per persona)</span>`
+            }
+        }
+        
+        // Seleziona torneo direttamente dalle card
+        function selezionaTorneoDaCard(id) {
+            document.getElementById('iscrizioni').scrollIntoView({ behavior: 'smooth' })
+            selezionaTipo(0)
+            
+            // Aspetta scroll e poi seleziona
+            setTimeout(() => {
+                const select = document.getElementById('select-torneo')
+                select.value = id
+                aggiornaPrezzo()
+            }, 800)
+        }
+        
+        // Form allenamento semplice (modal)
+        function mostraFormAllenamento() {
+            const modal = document.createElement('div')
+            modal.className = `fixed inset-0 bg-black/70 flex items-center justify-center z-[9999]`
+            modal.innerHTML = `
+            <div class="bg-white rounded-3xl max-w-md w-full mx-4 p-8">
+                <h3 class="text-3xl font-bold mb-6">Prenota allenamento 20€</h3>
+                <form onsubmit="inviaAllenamento(event)" class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Nome e Cognome</label>
+                        <input type="text" required class="w-full px-6 py-4 rounded-2xl border">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Email</label>
+                        <input type="email" required class="w-full px-6 py-4 rounded-2xl border">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium mb-2">Telefono</label>
+                        <input type="tel" required class="w-full px-6 py-4 rounded-2xl border">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Data preferita</label>
+                            <input type="date" required class="w-full px-6 py-4 rounded-2xl border">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Orario</label>
+                            <select class="w-full px-6 py-4 rounded-2xl border">
+                                <option>09:00 - 10:30</option>
+                                <option>11:00 - 12:30</option>
+                                <option>18:00 - 19:30</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="w-full py-5 bg-orange-500 text-white rounded-3xl font-bold text-xl">
+                        CONFERMA PRENOTAZIONE A 20€
+                    </button>
+                    <button type="button" onclick="this.closest('.fixed').remove()" 
+                            class="w-full py-3 text-gray-500 text-sm">Annulla</button>
+                </form>
+            </div>`
+            document.body.appendChild(modal)
+        }
+        
+        function inviaAllenamento(e) {
+            e.preventDefault()
+            alert("✅ Prenotazione allenamento inviata!\nRiceverai conferma via email entro pochi minuti.\nGrazie per aver scelto Mirko Cavecchi!")
+            e.target.closest('.fixed').remove()
+        }
+        
+        // Gestione form iscrizione principale
+        function gestisciIscrizione(e) {
+            e.preventDefault()
+            
+            const nomeSquadra = document.getElementById('nome-squadra').value
+            const g1 = `${document.getElementById('g1-nome').value} ${document.getElementById('g1-cognome').value}`
+            const g2 = `${document.getElementById('g2-nome').value} ${document.getElementById('g2-cognome').value}`
+            
+            let messaggio = `🎉 ISCRIZIONE INVIATA CON SUCCESSO!\n\n`
+            messaggio += `Squadra: ${nomeSquadra}\n`
+            messaggio += `Giocatore 1: ${g1}\n`
+            messaggio += `Giocatore 2: ${g2}\n`
+            
+            if (tipoAttuale === 0) {
+                const torneoSelezionato = tornei.find(t => t.id == document.getElementById('select-torneo').value)
+                messaggio += `Torneo: ${torneoSelezionato.nome}\n`
+                messaggio += `Quota: ${torneoSelezionato.prezzo}€\n`
+            } else {
+                messaggio += `Allenamento: 20€\n`
+            }
+            
+            messaggio += `\nGrazie! Mirko Cavecchi e tutto lo staff di Beach Volley ER ti contatteranno presto.`
+            
+            alert(messaggio)
+            
+            // Reset form
+            e.target.reset()
+            aggiornaPrezzo()
+        }
+        
+        // Mobile menu
+        function initMobileMenu() {
+            const btn = document.getElementById('mobile-menu-btn')
+            const menu = document.getElementById('mobile-menu')
+            
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden')
+                const icon = btn.querySelector('i')
+                if (icon.classList.contains('fa-bars')) {
+                    icon.classList.remove('fa-bars')
+                    icon.classList.add('fa-xmark')
+                } else {
+                    icon.classList.remove('fa-xmark')
+                    icon.classList.add('fa-bars')
+                }
+            })
+        }
+        
+        // Avvio completo
+        window.onload = function() {
+            initializeTailwind()
+            popolaTornei()
+            popolaSelectTornei()
+            initMobileMenu()
+            
+            console.log('%c✅ Sito Beach Volley ER creato con successo per te!', 'background:#f59e0b;color:white;padding:4px 8px;border-radius:9999px;font-weight:bold')
+        }
+    </script>
+</body>
+</html>
